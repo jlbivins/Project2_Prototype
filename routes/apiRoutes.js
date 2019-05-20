@@ -3,8 +3,9 @@ var db = require("../models");
 module.exports = function(app) {
   // Get all examples
   app.get("/api/community", function(req, res) {
-    db.Community.findAll({}).then(function(dbCommunity) {
-      res.json(dbCommunity);
+    db.Community.findAll().then(function(Community) {
+      console.log(Community);
+      res.json(Community);
     });
   });
 

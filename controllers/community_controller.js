@@ -21,7 +21,7 @@ router.get("/signup", function(req, res) {
     ]
   })
   // use promise method to pass the burgers...
-    .then(function(dbComunity) {
+    .then(function(dbCommunity) {
     // into the main index, updating the page
       var hbsObject = {
         picnic: dbCommunity
