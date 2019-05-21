@@ -5,5 +5,6 @@ module.exports = function (sequelize, DataTypes) {
                   qty: DataTypes.INTEGER,
                   email: DataTypes.STRING
                   });
+   console.log(Community);
   return Community;
 };

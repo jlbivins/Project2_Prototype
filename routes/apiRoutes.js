@@ -1,13 +1,17 @@
+var express = require("express");
+
+var router = express.Router();
+// grabbing our models
 var db = require("../models");
 
 module.exports = function(app) {
-  // Get all examples
-  app.get("/api/community", function(req, res) {
+  //Get all examples
+ app.get("/api/community", function(req, res) {
     db.Community.findAll().then(function(Community) {
       console.log(Community);
       res.json(Community);
-    });
-  });
+   });
+ });
 
   // Create a new example
   app.post("/api/examples", function(req, res) {
