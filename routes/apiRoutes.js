@@ -6,16 +6,21 @@ var db = require("../models");
 
 module.exports = function(app) {
   //Get all examples
+// debugger
+//  console.log("getting db + " + db)
  app.get("/api/community", function(req, res) {
-    db.Community.findAll().then(function(Community) {
-      console.log(Community);
-      res.json(Community);
+ //  debugger
+  // console.log(req)
+ //  debugger
+    db.Community.findAll({role: 'admin'}).then(admins => {
+      console.log(`Found ${admins.length} matching records.`);
+      res.json(admins);
    });
  });
 
   // Create a new example
   app.post("/api/examples", function(req, res) {
-    db.Example.create(req.body).then(function(dbExample) {
+    db.Community.create(req.body).then(function(dbExample) {
       res.json(dbExample);
     });
   });
