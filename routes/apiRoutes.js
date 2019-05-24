@@ -18,10 +18,23 @@ module.exports = function(app) {
    });
  });
 
+//  app.post("/api/event_update", function(req,res){
+//    db.Community.create({
+//      first_name: req.body.first_name,
+//      last_name: req.body.last_name,
+//      qty: req.body.qty,
+//      item: req.body.item,
+//      email: req.body.email
+//       }).then (function(admins){res.json(admins);
+//       });
+
+  // })
+ 
+
   // Create a new example
   app.post("/api/examples", function(req, res) {
-    db.Community.create(req.body).then(function(dbExample) {
-      res.json(dbExample);
+    db.Community.create(req.body).then(function(admins) {
+      res.json(admins);
     });
   });
 
