@@ -4,6 +4,7 @@ var router = express.Router();
 // grabbing our models
 var db = require("../models");
 
+
 module.exports = function(app) {
   //Get all examples
 // debugger
