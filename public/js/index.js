@@ -102,23 +102,22 @@ var handleDeleteBtnClick = function() {
 //   window.location = "/signup"
 // }
 
-// var postnewPicnicSignup = function(){
-//   console.log("clicked submit button");
-//   window.location = "/signup"
-// }
+var postnewPicnicSignup = function(){
+  console.log("clicked submit button");
+  window.location = "/signup"
+}
 
 
 // Add event listeners to the submit and delete buttons
-// $signupBtn.on("click", signupFunction);
+//$signupBtn.on("click", signupFunction);
 // $(function(){
 //   $submitBtn.on("click", function(){
 //     console.log("event listener working")
 //   });
 // });
 
-// $("#submitBtn").on("click",function(e){
-//   e.preventDefault()
-//   console.log("event listener working")
-// });
+$(window).on("click","#submitBtn", function(){
+  console.log("event listener working")
+});
 
 $exampleList.on("click", ".delete", handleDeleteBtnClick);
